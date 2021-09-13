@@ -7,7 +7,7 @@ import {
     Edit,
     Create,
     SimpleForm,
-    SimpleList,
+    //SimpleList,
     ReferenceInput,
     SelectInput,
     TextInput,
@@ -26,7 +26,7 @@ const postFilters = [
 
 export const PostList = props => (
     <List filters={postFilters} {...props}>
-{/*         <Datagrid>
+        <Datagrid>
             <TextField source="id" />
             <ReferenceField source="userId" reference="users">
                 <TextField source="name" />
@@ -34,12 +34,12 @@ export const PostList = props => (
             <TextField source="title" />
             <TextField source="body" />
             <EditButton />
-        </Datagrid> */}
-                <SimpleList
+        </Datagrid>
+   {/*              <SimpleList
             primaryText={record => record.title}
             secondaryText={record => `${record.views} views`}
             tertiaryText={record => new Date(record.published_at).toLocaleDateString()}
-        />
+        /> */}
     </List>
 );
 
